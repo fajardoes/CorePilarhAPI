@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorePilarh", "CorePilarh.csproj", "{2A5DCCCD-7D89-4ABD-A886-465020EB1310}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A5DCCCD-7D89-4ABD-A886-465020EB1310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5DCCCD-7D89-4ABD-A886-465020EB1310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5DCCCD-7D89-4ABD-A886-465020EB1310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5DCCCD-7D89-4ABD-A886-465020EB1310}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E146509A-8C89-4435-85A0-A498CAB77CA7}
+	EndGlobalSection
+EndGlobal
