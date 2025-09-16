@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CorePilarh.Models.Generales;
-
+namespace GestionesPilarh.Models.Generales;
 public partial class Semillaidentity
 {
     public string Esquema { get; set; } = null!;

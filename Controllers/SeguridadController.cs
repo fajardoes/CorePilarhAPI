@@ -1,12 +1,12 @@
-﻿using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.Finanzas;
-using CorePilarh.Services.Seguridad;
+﻿using GestionesPilarh.Models.DTO.Finanzas;
+using GestionesPilarh.Services.Seguridad;
+using GestionesPilarh.Models.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CorePilarh.Controllers
+namespace GestionesPilarh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

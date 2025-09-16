@@ -1,4 +1,4 @@
-﻿namespace CorePilarh.Models.DTO.Serinsa
+﻿namespace GestionesPilarh.Models.DTO.Serinsa
 {
     public class DtoDevuelvePersonaRequest
     {

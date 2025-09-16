@@ -1,7 +1,7 @@
-﻿using CorePilarh.Models.DTO.ActivosFijos;
+﻿using GestionesPilarh.Models.DTO.ActivosFijos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CorePilarh.Services.ActivosFijos
+namespace GestionesPilarh.Services.ActivosFijos
 {
     public interface IActivosFijos
     {
@@ -21,6 +21,7 @@ namespace CorePilarh.Services.ActivosFijos
         Task<IEnumerable<dynamic>> ObtenerControlActivosByEstado(int estado);
         Task<IEnumerable<dynamic>> ObtenerControlDetalle(int controlId);
         Task<ActionResult<dynamic>> ActualizaEstadoControlActivo(int controlId, int estado);
+        Task<ActionResult<dynamic>> ActualizaControlActivoDetalle(DtoActivoControlDetalle request);
         Task<ActionResult<object>> EliminaControlActivoDetalle(int activoDetalleId);
     }
 }

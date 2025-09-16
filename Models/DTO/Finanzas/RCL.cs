@@ -1,4 +1,4 @@
-﻿namespace CorePilarh.Models.DTO.Finanzas
+﻿namespace GestionesPilarh.Models.DTO.Finanzas
 {
     public class Accounts
     {

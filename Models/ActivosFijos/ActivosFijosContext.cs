@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CorePilarh.Models.ActivosFijos;
+namespace GestionesPilarh.Models.ActivosFijos;
 
 public partial class ActivosFijosContext : DbContext
 {

@@ -1,8 +1,8 @@
-﻿using CorePilarh.Models.DTO;
+﻿using GestionesPilarh.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
-namespace CorePilarh.Services.LoggerAPI
+namespace GestionesPilarh.Services.Logger
 {
     public class LoggerAPI : ILoggerAPI
     {

@@ -1,4 +1,4 @@
-﻿namespace CorePilarh.Models.DTO
+﻿namespace GestionesPilarh.Models.DTO
 {
     public class EstructuraActivosDto
     {

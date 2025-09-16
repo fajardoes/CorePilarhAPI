@@ -1,8 +1,8 @@
-﻿using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.Serinsa;
+﻿using GestionesPilarh.Models.DTO;
+using GestionesPilarh.Models.DTO.Serinsa;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CorePilarh.Services.Seguros.Serinsa
+namespace GestionesPilarh.Services.Seguros.Serinsa
 {
     public interface ISerinsa
     {

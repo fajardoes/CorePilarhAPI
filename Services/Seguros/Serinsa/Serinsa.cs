@@ -1,10 +1,10 @@
-﻿using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.Serinsa;
-using CorePilarh.Services.LoggerAPI;
+﻿using GestionesPilarh.Models.DTO;
+using GestionesPilarh.Models.DTO.Serinsa;
+using GestionesPilarh.Services.Logger;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
-namespace CorePilarh.Services.Seguros.Serinsa
+namespace GestionesPilarh.Services.Seguros.Serinsa
 {
     public class Serinsa : ISerinsa
     {
@@ -59,7 +59,13 @@ namespace CorePilarh.Services.Seguros.Serinsa
                                         Cli_ciudad = await reader.GetFieldValueAsync<string>(13),
                                         Cli_con_nombre = await reader.GetFieldValueAsync<string>(14),
                                         Cli_con_nacionalidad = await reader.IsDBNullAsync(1) ? (int?)null : await reader.GetFieldValueAsync<int?>(1),
-                                        Cli_con_numero_documento = (string?)null
+                                        Cli_con_numero_documento = (string?)null,
+                                        Cli_lab_empresa = await reader.IsDBNullAsync(15) ? (string?) null : await reader.GetFieldValueAsync<string>(15),
+                                        Cli_lab_profesion = await reader.IsDBNullAsync(16) ? (string?)null : await reader.GetFieldValueAsync<string>(16),
+                                        Cli_lab_cargo = await reader.IsDBNullAsync(17) ? (string?)null : await reader.GetFieldValueAsync<string>(17),
+                                        Cli_lab_direccion = await reader.IsDBNullAsync(18) ? (string?)null : await reader.GetFieldValueAsync<string>(18),
+                                        Cli_lab_ciudad = await reader.IsDBNullAsync(19) ? (string?)null : await reader.GetFieldValueAsync<string>(19),
+                                        Cli_lab_fuente = await reader.IsDBNullAsync(20) ? (string?)null : await reader.GetFieldValueAsync<string>(20),
                                     };
                                 }
                             }

@@ -1,7 +1,7 @@
-﻿using CorePilarh.Models.DTO;
+﻿using GestionesPilarh.Models.DTO;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CorePilarh.Services.Seguridad
+namespace GestionesPilarh.Services.Seguridad
 {
     public interface ISeguridad
     {

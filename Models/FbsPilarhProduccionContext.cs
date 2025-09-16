@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CorePilarh.Models;
+namespace GestionesPilarh.Models;
 
 public partial class FbsPilarhProduccionContext : DbContext
 {

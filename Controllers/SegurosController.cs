@@ -1,10 +1,10 @@
-﻿using CorePilarh.Models.DTO.Serinsa;
-using CorePilarh.Services.Seguros.Serinsa;
+﻿using GestionesPilarh.Models.DTO.Serinsa;
+using GestionesPilarh.Services.Seguros.Serinsa;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CorePilarh.Controllers
+namespace GestionesPilarh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

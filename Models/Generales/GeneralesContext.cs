@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CorePilarh.Models.Generales;
-
+namespace GestionesPilarh.Models.Generales;
 public partial class GeneralesContext : DbContext
 {
     public GeneralesContext()

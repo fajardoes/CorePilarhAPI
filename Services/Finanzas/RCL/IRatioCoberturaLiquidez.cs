@@ -1,6 +1,6 @@
-﻿using CorePilarh.Models.DTO.Finanzas;
+﻿using GestionesPilarh.Models.DTO.Finanzas;
 
-namespace CorePilarh.Services.Finanzas.RCL
+namespace GestionesPilarh.Services.Finanzas.RCL
 {
     public interface IRatioCoberturaLiquidez
     {

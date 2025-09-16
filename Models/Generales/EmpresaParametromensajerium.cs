@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CorePilarh.Models.Generales;
-
+namespace GestionesPilarh.Models.Generales;
 public partial class EmpresaParametromensajerium
 {
     public int Secuencialempresa { get; set; }

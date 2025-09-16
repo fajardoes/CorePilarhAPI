@@ -1,6 +1,6 @@
 ﻿using Org.BouncyCastle.Bcpg;
 
-namespace CorePilarh.Models.DTO.ActivosFijos
+namespace GestionesPilarh.Models.DTO.ActivosFijos
 {
     public class DtoActivo
     {

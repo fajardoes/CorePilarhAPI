@@ -1,13 +1,13 @@
-﻿using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.Finanzas;
-using CorePilarh.Services.LoggerAPI;
+﻿using GestionesPilarh.Models.DTO;
+using GestionesPilarh.Models.DTO.Finanzas;
 using Microsoft.Data.SqlClient;
 using OfficeOpenXml.Style;
 using OfficeOpenXml;
 using System.Data;
 using System.Reflection.Metadata;
+using GestionesPilarh.Services.Logger;
 
-namespace CorePilarh.Services.Finanzas.RCL
+namespace GestionesPilarh.Services.Finanzas.RCL
 {
     public class RatioCoberturaLiquidez : IRatioCoberturaLiquidez
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CorePilarh.Models;
+namespace GestionesPilarh.Models;
 
 public partial class UltimaaccionusuarioTemp
 {

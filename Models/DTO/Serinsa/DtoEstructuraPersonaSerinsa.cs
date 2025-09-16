@@ -1,4 +1,4 @@
-﻿namespace CorePilarh.Models.DTO.Serinsa
+﻿namespace GestionesPilarh.Models.DTO.Serinsa
 {
     public class DtoEstructuraPersonaSerinsa
     {
@@ -21,5 +21,11 @@
         public string Cli_con_nombre { get; set; } = string.Empty; //nombre del conyugue
         public int? Cli_con_nacionalidad { get; set; } = 0; //nacionalidad del conyugue
         public string? Cli_con_numero_documento { get; set; } = string.Empty; // documento identificador del conyugue
+        public string? Cli_lab_empresa {  get; set; } = string.Empty;
+        public string? Cli_lab_profesion {  get; set; } = string.Empty;
+        public string? Cli_lab_cargo {  get; set; } = string.Empty;
+        public string? Cli_lab_direccion { get; set; } = string.Empty;
+        public string? Cli_lab_ciudad { get; set; } = string.Empty;
+        public string? Cli_lab_fuente {  get; set; } = string.Empty;
     }
 }

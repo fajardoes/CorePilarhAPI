@@ -1,11 +1,11 @@
-﻿using CorePilarh.Models.DTO.ActivosFijos;
-using CorePilarh.Models.Generales;
-using CorePilarh.Services.ActivosFijos;
+﻿using GestionesPilarh.Models.DTO.ActivosFijos;
+using GestionesPilarh.Models.Generales;
+using GestionesPilarh.Services.ActivosFijos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CorePilarh.Controllers
+namespace GestionesPilarh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -304,6 +304,24 @@ namespace CorePilarh.Controllers
             try
             {
                 return await _serviceActivosFijos.GuardarControlActivoDetalle(request);
+            }
+            catch (Exception ex)
+            {
+                var errorResponse = new
+                {
+                    message = "Error: " + ex.Message,
+                    code = 400
+                };
+                var jsonError = JsonConvert.SerializeObject(errorResponse);
+                return BadRequest(jsonError);
+            }
+        }
+        [HttpPut("ActualizaControlActivoDetalle")]
+        public async Task<ActionResult<object>> ActualizaControlActivoDetalle([FromBody] DtoActivoControlDetalle request)
+        {
+            try
+            {
+                return await _serviceActivosFijos.ActualizaControlActivoDetalle(request);
             }
             catch (Exception ex)
             {

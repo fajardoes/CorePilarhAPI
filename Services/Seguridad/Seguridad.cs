@@ -1,7 +1,7 @@
-﻿using CorePilarh.Models;
-using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.Finanzas;
-using CorePilarh.Services.LoggerAPI;
+﻿using GestionesPilarh.Models;
+using GestionesPilarh.Models.DTO;
+using GestionesPilarh.Models.DTO.Finanzas;
+using GestionesPilarh.Services.Logger;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +13,7 @@ using System.Reflection;
 using System.Text;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
-namespace CorePilarh.Services.Seguridad
+namespace GestionesPilarh.Services.Seguridad
 {
     public class Seguridad : ISeguridad
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CorePilarh.Models.ActivosFijos;
+namespace GestionesPilarh.Models.ActivosFijos;
 
 /// <summary>
 /// Tabla para registrar los activos dentro de cada control de agencias

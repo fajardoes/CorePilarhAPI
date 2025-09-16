@@ -4,7 +4,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace CorePilarh.Helpers
+namespace GestionesPilarh.Helpers
 {
     public class Helpers
     {

@@ -1,16 +1,17 @@
-﻿using CorePilarh.Models.DTO;
-using CorePilarh.Models.DTO.ActivosFijos;
-using CorePilarh.Services.LoggerAPI;
-using Microsoft.Data.SqlClient;
-using System.Text;
+﻿using GestionesPilarh.Models;
+using GestionesPilarh.Models.ActivosFijos;
+using GestionesPilarh.Models.DTO;
+using GestionesPilarh.Models.DTO.ActivosFijos;
+using GestionesPilarh.Models.Generales;
+using GestionesPilarh.Services.Logger;
 using Microsoft.AspNetCore.Mvc;
-using CorePilarh.Models.ActivosFijos;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using CorePilarh.Models.Generales;
-using CorePilarh.Models;
+using Org.BouncyCastle.Asn1.Crmf;
 using System.Data;
+using System.Text;
 
-namespace CorePilarh.Services.ActivosFijos
+namespace GestionesPilarh.Services.ActivosFijos
 {
     public class ActivosFijos : IActivosFijos
     {
@@ -590,7 +591,7 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
             {
                 var dtoLog = new LogsDto
                 {
-                    Message = "Error obteniendo la lista de menus " + nameof(ObtenerActivoByCode),
+                    Message = "Error obteniendo el activo " + nameof(ObtenerActivoByCode),
                     Level = "Error",
                     Exception = "Error: " + ex?.InnerException?.Message.ToString()
                 };
@@ -910,6 +911,33 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
                 var dtoLog = new LogsDto
                 {
                     Message = "Error guardando el registro",
+                    Level = "Error",
+                    Exception = "Error: " + ex?.InnerException?.Message.ToString(),
+                };
+                await _logger.LogAction(dtoLog);
+                throw;
+            }
+        }
+        public async Task<ActionResult<dynamic>> ActualizaControlActivoDetalle(DtoActivoControlDetalle request)
+        {
+            var response = new DtoActivoRespuesta();
+            try
+            {
+                var controlDetalle = await _context.Controldetalles.FindAsync(request.Id);
+                if (controlDetalle != null)
+                {
+                    controlDetalle.Descripcion= request.Descripcion;
+                    await _context.SaveChangesAsync();
+                }
+                response.Message = "Se modificó con éxito";
+                response.Code = 200;
+                return response;
+            }
+            catch (Exception ex)
+            {
+                var dtoLog = new LogsDto
+                {
+                    Message = "Error actualizando el registro",
                     Level = "Error",
                     Exception = "Error: " + ex?.InnerException?.Message.ToString(),
                 };
