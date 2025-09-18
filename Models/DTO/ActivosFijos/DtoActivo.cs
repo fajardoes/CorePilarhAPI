@@ -105,6 +105,7 @@ namespace GestionesPilarh.Models.DTO.ActivosFijos
         public int Id { get; set; } = 0;
         public int IdControl { get; set; } = 0;
         public int SecuencialActivo { get; set; } = 0;
+        public int SecuencialPersonaResponsable { set; get; } 
         public string Descripcion { get; set; } = string.Empty;
         public string CodigoUsuario { set; get; } = string.Empty;
         public bool Activo { get; set; } = false;

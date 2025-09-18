@@ -14,9 +14,11 @@ public partial class Controldetalle
 
     public int Secuencialactivo { get; set; }
 
+    public int Secuencialpersonaresponsable { get; set; }
+
     public string? Descripcion { get; set; }
 
-    public string Codigousuario { get; set; } = null!;
+    public string? Codigousuario { get; set; }
 
     public bool? Activo { get; set; }
 
@@ -25,4 +27,6 @@ public partial class Controldetalle
     public virtual Control IdcontrolNavigation { get; set; } = null!;
 
     public virtual Activo SecuencialactivoNavigation { get; set; } = null!;
+
+    public virtual Persona SecuencialpersonaresponsableNavigation { get; set; } = null!;
 }

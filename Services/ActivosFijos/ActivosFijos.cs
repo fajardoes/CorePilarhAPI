@@ -583,6 +583,7 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
                     a.Secuencial,
                     a.Costo,
                     a.Descripcion,
+                    SecuencialPersonaResponsable = a.Secuencialpersonaresponsable,
                     a.Codigocompuesto
                 }).Where(c => c.Codigocompuesto == code).ToListAsync();
                 return list;
@@ -605,7 +606,8 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
             {
                 var query = _context.Controldetalles
                     .Include(a => a.SecuencialactivoNavigation)
-                    .AsQueryable();
+                    .Include(a => a.SecuencialpersonaresponsableNavigation)
+                    .AsQueryable().AsNoTracking();
                 var list = await query.Where(c => c.Idcontrol == controlId).ToListAsync();
                 return list;
             }
@@ -886,7 +888,6 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
             {
                 response.Message = "El registro ya esta en el control seleccionado.";
                 response.Code = 400;
-
                 return response;
             }
             try
@@ -895,6 +896,7 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
                 {
                     Idcontrol = request.IdControl,
                     Secuencialactivo = request.SecuencialActivo,
+                    Secuencialpersonaresponsable = request.SecuencialPersonaResponsable,
                     Descripcion = request.Descripcion,
                     Codigousuario = request.CodigoUsuario,
                     Activo = request.Activo,
@@ -926,7 +928,7 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
                 var controlDetalle = await _context.Controldetalles.FindAsync(request.Id);
                 if (controlDetalle != null)
                 {
-                    controlDetalle.Descripcion= request.Descripcion;
+                    controlDetalle.Descripcion = request.Descripcion;
                     await _context.SaveChangesAsync();
                 }
                 response.Message = "Se modificó con éxito";
@@ -970,8 +972,6 @@ inner join FBS_PERSONAS.PERSONA p on pr.SECUENCIALPERSONA = p.SECUENCIAL ";
                 throw;
             }
         }
-
-
         public async Task<string> GeneraCodigoActivo(int? secuencialDivision)
         {
             int ultimoSecuencial = await ObtenerUltimoSecuencial(secuencialDivision ?? 0);

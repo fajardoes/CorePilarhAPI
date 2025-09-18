@@ -3,19 +3,19 @@ using System.Collections.Generic;
 
 namespace GestionesPilarh.Models.ActivosFijos;
 
-public partial class PersonaResponsable
+public partial class Personatexto
 {
+    public int Secuencial { get; set; }
+
     public int Secuencialpersona { get; set; }
 
-    public int Secuencialoficinadepartamento { get; set; }
+    public string Codigocaracteristica { get; set; } = null!;
+
+    public string Valor { get; set; } = null!;
 
     public bool Estaactivo { get; set; }
 
     public int Numeroverificador { get; set; }
-
-    public virtual ICollection<Activo> Activos { get; set; } = new List<Activo>();
-
-    public virtual Oficinadepartamento SecuencialoficinadepartamentoNavigation { get; set; } = null!;
 
     public virtual Persona SecuencialpersonaNavigation { get; set; } = null!;
 }
